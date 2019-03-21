@@ -1,5 +1,9 @@
-var timeLeft = 30;
+var timeLeft = 20;
 var intervalId;
+var correctAnswers = 0;
+var incorrectAnswers = 0;
+$("#post-game-div").hide();
+$("#main-game-div").show();
 var triviaQuestions = [
   $("question1"),
   $("question2"),
@@ -13,10 +17,10 @@ var triviaQuestions = [
   $("question10")
 ]
 
-$("#post-game-div").hide();
-$("#main-game-div").show();
 
-function timer() {
+
+function gameStart() {
+
   $("#time-counter").text(timeLeft)
   intervalId = setInterval(decrement, 1000);
 }
@@ -33,15 +37,42 @@ function decrement() {
 
 function timesUp() {
   $("#post-game-div").show();
-$("#main-game-div").hide();
+  $("#main-game-div").hide();
 
-for (i = 0; i <= 9; i++) {
 
-const selector = $("input[name='question'"[i]"]:checked").val();
-console.log(selector)
 
+
+
+  ($("input:checked")).each(function () {
+    if ($(this).attr('value') == 'true') {
+      console.log($(this).attr('name') + " is correct.")
+      correctAnswers++
+    } else {
+      console.log($(this).attr('name') + " is not correct.")
+      incorrectAnswers++
+    }
+  })
+
+  $("#correct-answers").text(correctAnswers)
+  $("#incorrect-answers").text(incorrectAnswers)
+
+  $("#restart-button").on("click", function () {
+    console.clear();
+    correctAnswers = 0;
+    incorrectAnswers = 0;
+    timeLeft = 20;
+    $("input").prop("checked", false)
+    $("#post-game-div").hide();
+    $("#main-game-div").show();
+    clearInterval(intervalId)
+    gameStart();
+    return
+  })
 }
 
-}
 
-timer();
+
+
+
+
+gameStart();
