@@ -4,6 +4,7 @@ var correctAnswers = 0;
 var incorrectAnswers = 0;
 $("#post-game-div").hide();
 $("#main-game-div").show();
+
 var triviaQuestions = [
   $("question1"),
   $("question2"),
@@ -17,17 +18,13 @@ var triviaQuestions = [
   $("question10")
 ]
 
-
-
 function gameStart() {
-
   $("#time-counter").text(timeLeft)
   intervalId = setInterval(decrement, 1000);
 }
 
 function decrement() {
   timeLeft--;
-
   $("#time-counter").text(timeLeft)
 
   if (timeLeft === 0) {
@@ -39,16 +36,10 @@ function timesUp() {
   $("#post-game-div").show();
   $("#main-game-div").hide();
 
-
-
-
-
-  ($("input:checked")).each(function () {
+  ($("input:checked")).each(function() {
     if ($(this).attr('value') == 'true') {
-      console.log($(this).attr('name') + " is correct.")
       correctAnswers++
     } else {
-      console.log($(this).attr('name') + " is not correct.")
       incorrectAnswers++
     }
   })
@@ -69,10 +60,5 @@ function timesUp() {
     return
   })
 }
-
-
-
-
-
 
 gameStart();
