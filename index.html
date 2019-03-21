@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <h1>Welcome to Movie Trivia!</h1>
+
+  <div id="main-game-div">
+
+  <h2>Time Remaining: <span id="time-counter"></span></h2>
+
+  <div id="question-1" class="questions">
+    <p>Which actress plays Katniss Everdeen in the Hunger Games movies?</p>
+    <form>
+      <input type="radio" name="question1" value="false">Whitney Houston
+      <input type="radio" name="question1" value="false">Jennifer Anniston
+      <input type="radio" name="question1" value="true">Jennifer Lawrence
+      <input type="radio" name="question1" value="false">Betty White
+    </form>
+  </div>
+
+  <div id="question-2" class="questions">
+    <p>Judy Garland starred as Dorothy Gale in which classic movie?</p>
+    <form>
+      <input type="radio" name="question2" value="false">Alice in Wonderland
+      <input type="radio" name="question2" value="true">The Wizard of Oz
+      <input type="radio" name="question2" value="false">Toy Story
+      <input type="radio" name="question2" value="false">Talladega Nights
+    </form>
+  </div>
+
+  <div id="question-3" class="questions">
+    <p>What is the name of the kingdom where the movie Frozen is set?</p>
+    <form>
+      <input type="radio" name="question3" value="true">Arendelle
+      <input type="radio" name="question3" value="false">Alabama
+      <input type="radio" name="question3" value="false">New Hampshire
+      <input type="radio" name="question3" value="false">Pandora
+    </form>
+  </div>
+
+  <div id="question-4" class="questions">
+    <p>In which science fiction movie did Linda Hamilton play the role of Sarah Connor?</p>
+    <form>
+      <input type="radio" name="question4" value="false">Gataca
+      <input type="radio" name="question4" value="false">Harry Potter
+      <input type="radio" name="question4" value="false">Maze Runner
+      <input type="radio" name="question4" value="true">The Terminator
+    </form>
+  </div>
+
+  <div id="question-5" class="questions">
+    <p>Who played Jack Dawson in the 1997 movie Titanic?</p>
+    <form>
+      <input type="radio" name="question5" value="false">Abraham Lincoln
+      <input type="radio" name="question5" value="false">Kevin Hart
+      <input type="radio" name="question5" value="true">Leonardo DiCaprio
+      <input type="radio" name="question5" value="false">Matt Damon
+    </form>
+  </div>
+
+  <div id="question-6" class="questions">
+    <p>Who directed the movie Pulp Fiction?</p>
+    <form>
+      <input type="radio" name="question6" value="false">Steven Spielberg
+      <input type="radio" name="question6" value="false">Will Ferrell
+      <input type="radio" name="question6" value="true">Quentin Tarantino
+      <input type="radio" name="question6" value="false">Squidward Tenticles
+    </form>
+  </div>
+
+  <div id="question-7" class="questions">
+    <p>Who was the first African American actor to win the Academy Award for Best Actor?</p>
+    <form>
+      <input type="radio" name="question7" value="false">Kevin Hart
+      <input type="radio" name="question7" value="false">Will Smith
+      <input type="radio" name="question7" value="false">Jennifer Lawrence
+      <input type="radio" name="question7" value="true">Sidney Poitier
+    </form>
+  </div>
+
+  <div id="question-8" class="questions">
+    <p>Which Tom Hanks movie won the Academy Award for Best Picture in 1994?</p>
+    <form>
+      <input type="radio" name="question8" value="true">Forrest Gump
+      <input type="radio" name="question8" value="false">The Spongebob Squarepants Movie
+      <input type="radio" name="question8" value="false">Shawshank Redemption
+      <input type="radio" name="question8" value="false">Sully
+    </form>
+  </div>
+
+  <div id="question-9" class="questions">
+    <p>Which director was responsible for the movie Gladiator in 2000?</p>
+    <form>
+      <input type="radio" name="question9" value="false">Steven Spielberg
+      <input type="radio" name="question9" value="true">Ridley Scott
+      <input type="radio" name="question9" value="false">David Lynch
+      <input type="radio" name="question9" value="false">Peyton Manning
+    </form>
+  </div>
+
+  <div id="question-10" class="questions">
+    <p>Which classic triller stars Roy Schieder as the police chief Martin Brody?</p>
+    <form>
+      <input type="radio" name="question10" value="false">Dodgeball
+      <input type="radio" name="question10" value="false">Billy Madison
+      <input type="radio" name="question10" value="false">Pineapple Express
+      <input type="radio" name="question10" value="true">Jaws
+    </form>
+  </div>
+
+</div>
+
+  <div id="post-game-div">
+
+    <h2>Here are your results!</h2>
+
+    <p>Correct: <span id="correct-answers"></span></p>
+
+    <p>Incorrect: <span id="incorrect-answers"></span></p>
+
+  </div>
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/javascript/app.js" async defer></script>
+</body>
+
+</html>
